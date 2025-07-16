@@ -33,24 +33,40 @@ Biomni is a general-purpose biomedical AI agent designed to autonomously execute
 ### Installation
 
 Our software environment is massive and we provide a single setup.sh script to setup.
-Follow this [file](biomni_env/README.md) to setup the env first.
 
-Then activate the environment E1:
-
+We recommned using [uv](https://docs.astral.sh/uv/) to manage your python projects. 
 ```bash
-conda activate biomni_e1
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+## Setup Instructions
 
-then install the biomni official pip package:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/snap-stanford/Biomni.git
+   ```
 
-```bash
-pip install biomni --upgrade
-```
+2. **Choose your setup option**:
+
+   ### Option A: Basic Environment (Quick Setup)
+   For basic usage without the full bioinformatics toolkit:
+   ```bash
+   cd Biomni  # Go to project root
+   uv venv --python 3.11 .venv
+   source .venv/bin/activate
+   uv sync
+   ```
+
+   ### Option B: Full Environment (Complete Setup)
+   For the complete bioinformatics environment with all tools:
+   ```bash
+   cd Biomni/biomni_env
+   bash setup_uv.sh
+   ```
 
 For the latest update, install from the github source version, or do:
 
 ```bash
-pip install git+https://github.com/snap-stanford/Biomni.git@main
+uv add git+https://github.com/snap-stanford/Biomni.git@main
 ```
 
 Lastly, configure your API keys in bash profile `~/.bashrc`:
