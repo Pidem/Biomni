@@ -127,6 +127,7 @@ Experience Biomni through our no-code web interface at **[biomni.stanford.edu](h
 - [ ] 8 Real-world research task benchmark/leaderboard release
 - [ ] A tutorial on how to contribute to Biomni
 - [ ] A tutorial on baseline agents
+- [ ] Cloud Deployment (AWS) and MCP Support
 - [x] Biomni A1+E1 release
 
 ## Note
